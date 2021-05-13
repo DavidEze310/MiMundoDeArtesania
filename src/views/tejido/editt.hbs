@@ -1,0 +1,44 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card ">
+                <div class="card-header text-center">
+                    <h3>Que modificacion quieres hacer?</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/tejido/edit/{{tejido.id}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" value="{{tejido.prenda}}" class="form-control" name="prenda" placeholder="Tipo de Prenda" autofocus>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{tejido.lana}}" class="form-control" name="lana" placeholder="Lana que utilizaras">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{tejido.punto}}" class="form-control" name="punto" placeholder="Punto a Utilizar">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{tejido.tipo}}" class="form-control" name="tipo" placeholder="Tipo de Aguja">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" value="{{tejido.numero}}" class="form-control" name="numero" placeholder="Numero de Aguja">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="url" value="{{tejido.imagen}}" name="imagen" class="form-control" placeholder="Link de la Imagen">
+                        </div>
+                        <br>
+                        <div class="form-group d-grid gap-2">
+                            <button class="btn btn-success">
+                                <i class="bi bi-clipboard-check"> Guardar</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

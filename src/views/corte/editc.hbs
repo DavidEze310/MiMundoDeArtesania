@@ -1,0 +1,32 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card ">
+                <div class="card-header text-center">
+                    <h3>Que modificacion quieres hacer?</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/corte/edit/{{corte.id}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" value="{{corte.prenda}}" class="form-control" name="prenda" placeholder="Tipo de Prenda" autofocus>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <textarea name="materiales" rows="2" class="form-control" placeholder="Materiales a Usar">{{corte.materiales}}</textarea>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="url" value="{{corte.imagen}}" name="imagen" class="form-control" placeholder="Link de la Imagen">
+                        </div>
+                        <br>
+                        <div class="form-group d-grid gap-2">
+                            <button class="btn btn-success">
+                                <i class="bi bi-clipboard-check"> Guardar</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

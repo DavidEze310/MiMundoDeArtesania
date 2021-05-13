@@ -1,0 +1,37 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each tejidos}}
+        <div class="card card-body text-center">
+            <p>Para agregar nuevos datos sobre tejidos hacé click acá abajo</p>
+            <a href="/tejido/add" class="btn btn-outline-info"><i class="bi bi-folder-plus text-dark"> Agregar</i></a>
+        </div>
+        <br>
+        <div class="col-md-5 mt-2">
+            <div class="card text-center">
+                <div class="card-header ">
+                    <h3>{{prenda}}</h3>
+                </div>
+                <div class="card-body">
+                    <p class="m-2 font-italic">Tipo de Lana: {{lana}}</p>
+                    <p class="m-2">Punto a Usar: {{punto}}</p>
+                    <p class="m-2">Tipo de Agujas: {{tipo}}</p>
+                    <p class="m-2">Nro: {{numero}}</p>
+                    <a href="{{imagen}}" class="text-center">Link de la Imagen</a>
+                    <p class="text-center">{{timeago created_at}}</p>
+                    <p><i class="bi bi-exclamation-triangle">Si el link no te redirecciona, es por que no tiene un link
+                            guardado</i></p>
+                    <a href="/tejido/delete/{{id}}" class="btn btn-danger"><i class="bi bi-trash"> Borrar</i></a>
+                    <a href="/tejido/edit/{{id}}" class="btn btn-secondary"><i class="bi bi-arrow-repeat"> Editar</i></a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay datos sobre tejidos guardados aun.</p>
+                <a href="/tejido/add">Crea Uno Nuevo</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

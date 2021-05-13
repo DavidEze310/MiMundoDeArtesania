@@ -1,0 +1,42 @@
+CREATE DATABASE mimundoartesanias;
+Use mimundoartesanias;
+CREATE TABLE users(
+    id INT (11) NOT NULL,
+    usuario VARCHAR (20) NOT NULL,
+    contraseña VARCHAR (60) NOT NULL,
+    nombre VARCHAR (100) NOT NULL
+);
+ALTER TABLE users
+    ADD PRIMARY KEY (id);
+ALTER TABLE users
+    MODIFY id INT (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
+DESCRIBE users;
+CREATE TABLE tejido(
+    id INT (11) NOT NULL,
+    tipo VARCHAR (100) NOT NULL,
+    numero INT(20) NOT NULL,
+    lana VARCHAR (200) NOT NULL,
+    prenda VARCHAR (250) NOT NULL,
+    punto VARCHAR (200) NOT NULL,
+    imagen VARCHAR (255),
+    user_id INT(11),
+    create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+    CONSTRAINT fk1_user FOREIGN KEY (user_id) REFERENCES users(id)
+);
+ALTER TABLE tejido
+    ADD PRIMARY KEY (id);
+ALTER TABLE tejido
+     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
+CREATE TABLE corte (
+    id INT (11) NOT NULL,
+    prenda VARCHAR (250) NOT NULL,
+    materiales TEXT NOT NULL,
+    imagen VARCHAR (255),
+    user_id INT (11),
+    create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+    CONSTRAINT fk2_user FOREIGN KEY (user_id) REFERENCES users(id)
+);
+ALTER TABLE corte
+    ADD PRIMARY KEY (id);
+ALTER TABLE corte
+     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
