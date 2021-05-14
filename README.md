@@ -1,2 +1,2 @@
 # MiMundoDeArtesania
-Primera version de pagina basada en un  emprendimiento invdividual  de tejido
+Primera version de pagina basada en un  emprendimiento real sobre tejido
